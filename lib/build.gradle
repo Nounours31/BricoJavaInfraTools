@@ -75,7 +75,7 @@ jar {
 		)
     }
     archiveBaseName='BricoInfraTools'
-    archiveVersion='1.0.0'
+    archiveVersion='1.1.0'
 }
 
 
@@ -92,6 +92,6 @@ sourcesJar {
 		)
     }
     archiveBaseName='BricoInfraTools'
-    archiveVersion='1.0.0'
+    archiveVersion='1.1.0'
 }
 

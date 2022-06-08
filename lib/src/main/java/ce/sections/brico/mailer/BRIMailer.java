@@ -20,7 +20,7 @@ public class BRIMailer {
 	
 	private final static HashMap<String, String> _Properties = InitProp();
 	
-	private final static javax.mail.Authenticator _authen = new javax.mail.Authenticator() {
+	private static javax.mail.Authenticator _authen = new javax.mail.Authenticator() {
 		protected PasswordAuthentication getPasswordAuthentication() {
 			return new PasswordAuthentication(username, password);
 		}
@@ -36,6 +36,14 @@ public class BRIMailer {
 	}
 	
 	public BRIMailer() {
+	}
+
+	public BRIMailer(String user, String pwd) {
+		_authen = new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(user, pwd);
+			}
+		};
 	}
 
 	public int SendEmailTLS (ArrayList<String> emails, String subject, String msg) {
